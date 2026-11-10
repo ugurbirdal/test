@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:padding="24dp"
+    android:background="#F5F5F5">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Su Tankı Seviye Monitörü"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:textColor="#333333"
+        android:layout_marginBottom="32dp"/>
+
+    <!-- Su Tankı Konteynerı -->
+    <FrameLayout
+        android:layout_width="160dp"
+        android:layout_height="280dp"
+        android:background="@drawable/tank_border"
+        android:padding="4dp"
+        android:layout_marginBottom="24dp">
+
+        <!-- Su Seviyesi (Dinamik olarak yüksekliği değişecek) -->
+        <View
+            android:id="@+id/waterView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
+            android:background="#2196F3"/>
+    </FrameLayout>
+
+    <!-- Yüzde Göstergesi -->
+    <TextView
+        android:id="@+id/txtLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%0"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:textColor="#1976D2"
+        android:layout_marginBottom="8dp"/>
+
+    <!-- Bağlantı Durumu -->
+    <TextView
+        android:id="@+id/txtStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bağlanıyor..."
+        android:textSize="14sp"
+        android:textColor="#757575"
+        android:layout_marginBottom="24dp"/>
+
+    <!-- Yenile / Bağlan Butonu -->
+    <Button
+        android:id="@+id/btnConnect"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        text="Bağlantıyı Yenile"
+        android:text="Bağlantıyı Yenile"/>
+
+</LinearLayout>
